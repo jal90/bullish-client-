@@ -61,6 +61,14 @@ const onUpdateSurvey = function (event) {
     .catch(ui.updateFailed)
 }
 
+const onDeleteSurvey = function (event) {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  api.deleteSurvey(data)
+    .then(ui.deleteSuccess)
+    .catch(ui.deleteFailed)
+}
+
 const addHandlers = () => {
   $('#sign-up').on('submit', onSignUp)
   $('#sign-in').on('submit', onSignIn)
@@ -69,6 +77,7 @@ const addHandlers = () => {
   $('#create').on('submit', onCreateSurvey)
   $('#showAll').on('submit', onShowAllSurveys)
   $('#update').on('submit', onUpdateSurvey)
+  $('#delete').on('submit', onDeleteSurvey)
 }
 
 module.exports = {

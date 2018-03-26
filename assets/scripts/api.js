@@ -81,6 +81,18 @@ const updateSurvey = function (data) {
   })
 }
 
+const deleteSurvey = function (data) {
+  return $.ajax({
+    url: config.apiOrigin + '/surveys/' + data.survey.id,
+    method: 'DELETE',
+    headers: {
+      contentType: 'application/json',
+      Authorization: 'Token token=' + store.user.token
+    },
+    data
+  })
+}
+
 module.exports = {
   signUp,
   signIn,
@@ -88,5 +100,6 @@ module.exports = {
   signOut,
   createSurvey,
   showAllSurveys,
-  updateSurvey
+  updateSurvey,
+  deleteSurvey
 }
