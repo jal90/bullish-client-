@@ -11,5 +11,4 @@ curl "http://localhost:4741/sign-up" \
      "password_confirmation": "'"${PASSWORD_CONFIRMATION}"'"
    }
  }'
-
-echo
+ echo
