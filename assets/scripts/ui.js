@@ -80,6 +80,10 @@ const signOutFailure = function (error) {
   $('#message').css('background-color', 'red')
 }
 
+const showAllSuccess = function (data) {
+  $('body').append(JSON.stringify(data))
+}
+
 module.exports = {
   signUpSuccess,
   signUpFailure,
@@ -88,5 +92,6 @@ module.exports = {
   changeSuccess,
   changeFailure,
   signOutSuccess,
-  signOutFailure
+  signOutFailure,
+  showAllSuccess
 }

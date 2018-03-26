@@ -37,11 +37,38 @@ const onSignOut = function () {
   console.log(data)
 }
 
+const onCreateSurvey = function (event) {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  console.log('data is ', data)
+  api.createSurvey(data)
+    .then(ui.createSuccessful)
+    .catch(ui.createFailed)
+}
+
+const onShowAllSurveys = function (event) {
+  event.preventDefault()
+  api.showAllSurveys()
+    .then(ui.showAllSuccess)
+    .catch(ui.showAllFailure)
+}
+
+const onUpdateSurvey = function (event) {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  api.updateSurvey(data)
+    .then(ui.updateSuccess)
+    .catch(ui.updateFailed)
+}
+
 const addHandlers = () => {
   $('#sign-up').on('submit', onSignUp)
   $('#sign-in').on('submit', onSignIn)
   $('#change-password').on('submit', onChangePassword)
   $('#sign-out').on('submit', onSignOut)
+  $('#create').on('submit', onCreateSurvey)
+  $('#showAll').on('submit', onShowAllSurveys)
+  $('#update').on('submit', onUpdateSurvey)
 }
 
 module.exports = {

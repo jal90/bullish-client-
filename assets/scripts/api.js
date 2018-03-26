@@ -47,9 +47,46 @@ const signOut = function (id) {
   })
 }
 
+const createSurvey = function (data) {
+  return $.ajax({
+    url: config.apiOrigin + '/surveys',
+    method: 'POST',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data
+  })
+}
+
+const showAllSurveys = function () {
+  return $.ajax({
+    url: config.apiOrigin + '/surveys',
+    method: 'GET',
+    headers: {
+      // contentType: 'application/json',
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
+const updateSurvey = function (data) {
+  return $.ajax({
+    url: config.apiOrigin + '/surveys/' + data.survey.id,
+    method: 'PATCH',
+    headers: {
+      contentType: 'application/json',
+      Authorization: 'Token token=' + store.user.token
+    },
+    data
+  })
+}
+
 module.exports = {
   signUp,
   signIn,
   changePassword,
-  signOut
+  signOut,
+  createSurvey,
+  showAllSurveys,
+  updateSurvey
 }

@@ -1,55 +1,83 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <title>TB-Survey</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `link` tags-->
-      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<head>
+  <title>TB-Survey</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `script` tags-->
-      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
-      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
-    </head>
-    <body class="container-fluid">
-      <h1>TB-Survey</h1>
+  <!-- Do not add `link` tags-->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
-      <p id="message" class="message"></p>
+  <!-- Do not add `script` tags-->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
 
-      <form id="sign-up" class="border sign-up">
-          <fieldset>
-            <legend class="new-member">Sign up!</legend>
-            <input type="submit" value="Sign up!" id="signUpButton">
-            <input  type="text" name="credentials[email]" required id="email-field" placeholder="Email">
-            <input  type="password" name="credentials[password]" required id="password-field"  placeholder="Password">
-            <input  type="password" name="credentials[password_confirmation]" required id="password-conformation-field"  placeholder="Confirm Password">
-          </fieldset>
-      </form>
+<body class="container-fluid">
+  <h1>TB-Survey</h1>
 
-      <form id="sign-in" class="border sign-in">
-        <fieldset>
-          <legend class="returning-member">Sign In Here!</legend>
-          <input id="signInField" type="submit" value="Sign in!">
-          <input type="text" name="credentials[email]" required id="signInEmail" placeholder="Email">
-          <input type="password" name="credentials[password]" required id="signInPassword" placeholder="Password">
-        </fieldset>
-      </form>
+  <p id="message" class="message"></p>
+
+  <form id="sign-up" class="border sign-up">
+    <fieldset>
+      <legend class="new-member">Sign up!</legend>
+      <input type="submit" value="Sign up!" id="signUpButton">
+      <input type="text" name="credentials[email]" required id="email-field" placeholder="Email">
+      <input type="password" name="credentials[password]" required id="password-field" placeholder="Password">
+      <input type="password" name="credentials[password_confirmation]" required id="password-conformation-field" placeholder="Confirm Password">
+    </fieldset>
+  </form>
+
+  <form id="sign-in" class="border sign-in">
+    <fieldset>
+      <legend class="returning-member">Sign In Here!</legend>
+      <input id="signInField" type="submit" value="Sign in!">
+      <input type="text" name="credentials[email]" required id="signInEmail" placeholder="Email">
+      <input type="password" name="credentials[password]" required id="signInPassword" placeholder="Password">
+    </fieldset>
+  </form>
 
 
-      <form id="sign-out" class="border sign-out">
-          <fieldset>
-            <legend class="leaving">Sign Out</legend>
-            <input type="submit" value="Sign Out">
-          </fieldset>
-      </form>
+  <form id="sign-out" class="border sign-out">
+    <fieldset>
+      <legend class="leaving">Sign Out</legend>
+      <input type="submit" value="Sign Out">
+    </fieldset>
+  </form>
 
-      <form id="change-password" class="border change-pw">
-        <fieldset>
-          <legend class="changing">Change Password</legend>
-          <input id="passwordField" type="submit" value="Change Password">
-          <input type="password" name="passwords[old]" id="oldPasswordField" placeholder="old Password">
-          <input type="password" name="passwords[new]" id="newPasswordField" placeholder="new Password">
-        </fieldset>
-      </form>
-    </body>
+  <form id="change-password" class="border change-pw">
+    <fieldset>
+      <legend class="changing">Change Password</legend>
+      <input id="passwordField" type="submit" value="Change Password">
+      <input type="password" name="passwords[old]" id="oldPasswordField" placeholder="old Password">
+      <input type="password" name="passwords[new]" id="newPasswordField" placeholder="new Password">
+    </fieldset>
+  </form>
+
+  <form id="create" class="border new-item">
+    <fieldset>
+      <legend class="creation">Survey Title</legend>
+      <p id="addSomething"></p>
+      <input id="createField" type="submit" value="Add Survey">
+      <input type="text" name="survey[title]" placeholder="Survey Title">
+    </fieldset>
+  </form>
+
+  <form id="showAll" class="border all-movies">
+    <fieldset>
+      <legend>My Survey</legend>
+      <input type="submit" value="Show My Movies">
+    </fieldset>
+  </form>
+
+  <form id="update" class="border update-movies">
+    <fieldset>
+      <legend class="update">Update an Existing Survey</legend>
+      <input id="updateField" type="submit" value="Update Survey"><br>
+      <input type="text" name="survey[id]" placeholder="Survey ID Here"><br>
+      <input type="text" name="survey[title]" placeholder="Survey Title"><br>
+    </fieldset>
+  </form>
+
+</body>
 </html>
