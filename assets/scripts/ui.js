@@ -89,6 +89,7 @@ const createSuccessful = function (data) {
   $('#message').text('"It\'s Alive, It\'s Alive!!!"-New Movie Added')
   $('#message').css('background-color', 'green')
   $('#createSurvey').val('')
+  $('#createOtherSurvey').val('')
   store.movie = data.movie
 }
 

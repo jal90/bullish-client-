@@ -78,6 +78,7 @@ const addHandlers = () => {
   $('#showAll').on('submit', onShowAllSurveys)
   $('#update').on('submit', onUpdateSurvey)
   $('#delete').on('submit', onDeleteSurvey)
+  $('#signUp').on('click', () => $('#sign-Up').show())
 }
 
 module.exports = {
