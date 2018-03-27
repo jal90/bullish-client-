@@ -78,9 +78,11 @@ const addHandlers = () => {
   $('#showAll').on('submit', onShowAllSurveys)
   $('#update').on('submit', onUpdateSurvey)
   $('#delete').on('submit', onDeleteSurvey)
-  // $('#sign-up').on('click', () => $('#sign-Up').show())
   $('a.show-form').on('click', function () {
-    $('#sign-up').show()
+    $('#sign-up').toggle()
+  })
+  $('a.show-in').on('click', function () {
+    $('#sign-in').toggle()
   })
 }
 

@@ -21,29 +21,18 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">WebSiteName</a>
+      <a class="navbar-brand" href="#">TB SURVEY</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
         <li><a class="show-form" href="#signUp"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <li><a class="show-in" href="#sign-in"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-<div id="signUp">
-    <form id="sign-up" class="border sign-up">
-   <fieldset>
-     <legend class="new-member">Sign up!</legend>
-     <input type="submit" value="Sign up!" id="signUpButton">
-     <input type="text" name="credentials[email]" required id="email-field" placeholder="Email">
-     <input type="password" name="credentials[password]" required id="password-field" placeholder="Password">
-     <input type="password" name="credentials[password_confirmation]" required id="password-conformation-field" placeholder="Confirm Password">
-   </fieldset>
- </form>
-</div>
-
+<!-- SIGN UP FORM -->
   <p id="message" class="message"></p>
   <div id="signUp">
     <form id="sign-up" class="border sign-up">
@@ -56,9 +45,10 @@
       </fieldset>
     </form>
   </div>
+<!-- END OF SIGN UP FORM -->
 
+<!-- SIGN IN FORM -->
   <form id="sign-in" class="border sign-in">
-
     <fieldset>
       <legend class="returning-member">Sign In Here!</legend>
       <input id="signInField" type="submit" value="Sign in!">
@@ -66,15 +56,18 @@
       <input type="password" name="credentials[password]" required id="signInPassword" placeholder="Password">
     </fieldset>
   </form>
+<!-- END OF SIGN IN FORM -->
 
-
+<!-- SIGN OUT FORM -->
   <form id="sign-out" class="border sign-out">
     <fieldset>
       <legend class="leaving">Sign Out</legend>
       <input type="submit" value="Sign Out">
     </fieldset>
   </form>
+<!-- END OF SIGN OUT FORM -->
 
+<!-- CHANGE PASSWORD FORM -->
   <form id="change-password" class="border change-pw">
     <fieldset>
       <legend class="changing">Change Password</legend>
@@ -83,7 +76,9 @@
       <input type="password" name="passwords[new]" id="newPasswordField" placeholder="new Password">
     </fieldset>
   </form>
+<!-- END OF CHANGE PASSWORD FORM-->
 
+<!-- CREATE SURVEY FORM -->
   <form id="create" class="border new-item">
     <fieldset>
       <legend class="creation">Survey Title</legend>
@@ -93,14 +88,18 @@
       <input type="text" name="survey[title]" id="createOtherSurvey" placeholder="Choice Two">
     </fieldset>
   </form>
+  <!-- END OF CREATE SURVEY FORM -->
 
+<!-- SHOW ALL FORM -->
   <form id="showAll" class="border all-surveys">
     <fieldset>
       <legend>My Survey</legend>
       <input type="submit" value="Show My Surveys">
     </fieldset>
   </form>
+<!-- END OF SHOW ALL FORM -->
 
+<!-- UPDATE FORM -->
   <form id="update" class="border update-surveys">
     <fieldset>
       <legend class="update">Update an Existing Survey</legend>
@@ -109,7 +108,9 @@
       <input type="text" name="survey[title]" id="updateSurvey" placeholder="Survey Title"><br>
     </fieldset>
   </form>
+<!-- END OF UPDATE FORM -->
 
+<!-- DELETE SURVEY FORM -->
   <form id="delete" class="border delete-surveys">
     <fieldset>
       <legend class="update">Delete an Existing Survey</legend>
@@ -117,7 +118,7 @@
       <input type="text" name="survey[id]" id="deleteSurvey" placeholder="Survey ID Here"><br>
     </fieldset>
   </form>
-
+<!-- END OF DELETE SURVEY FORM -->
 </body>
 
 </html>
