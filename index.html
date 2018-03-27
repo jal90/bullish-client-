@@ -12,42 +12,42 @@
   <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
   <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
 </head>
+
 <body class="container-fluid">
   <nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">TB SURVEY</a>
+        <a class="navbar-brand" href="#">TB SURVEY</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a class="show-form" href="#signUp"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+          <li><a class="show-in" href="#sign-in"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        </ul>
+      </div>
     </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a class="show-form" href="#signUp"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-        <li><a class="show-in" href="#sign-in"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+  </nav>
 
-<!-- SIGN UP FORM -->
+  <!-- SIGN UP FORM -->
   <p id="message" class="message"></p>
-  <div id="signUp">
+
     <form id="sign-up" class="border sign-up">
       <fieldset>
-        <legend class="new-member">Sign up!</legend>
+        <legend>Sign up!</legend>
         <input type="submit" value="Sign up!" id="signUpButton">
         <input type="text" name="credentials[email]" required id="email-field" placeholder="Email">
         <input type="password" name="credentials[password]" required id="password-field" placeholder="Password">
-        <input type="password" name="credentials[password_confirmation]" required id="password-conformation-field" placeholder="Confirm Password">
+        <input type="password" name="credentials[password_confirmation]" required placeholder="Confirm Password">
       </fieldset>
     </form>
-  </div>
-<!-- END OF SIGN UP FORM -->
+  <!-- END OF SIGN UP FORM -->
 
-<!-- SIGN IN FORM -->
+  <!-- SIGN IN FORM -->
   <form id="sign-in" class="border sign-in">
     <fieldset>
       <legend class="returning-member">Sign In Here!</legend>
@@ -56,18 +56,18 @@
       <input type="password" name="credentials[password]" required id="signInPassword" placeholder="Password">
     </fieldset>
   </form>
-<!-- END OF SIGN IN FORM -->
+  <!-- END OF SIGN IN FORM -->
 
-<!-- SIGN OUT FORM -->
+  <!-- SIGN OUT FORM -->
   <form id="sign-out" class="border sign-out">
     <fieldset>
       <legend class="leaving">Sign Out</legend>
       <input type="submit" value="Sign Out">
     </fieldset>
   </form>
-<!-- END OF SIGN OUT FORM -->
+  <!-- END OF SIGN OUT FORM -->
 
-<!-- CHANGE PASSWORD FORM -->
+  <!-- CHANGE PASSWORD FORM -->
   <form id="change-password" class="border change-pw">
     <fieldset>
       <legend class="changing">Change Password</legend>
@@ -76,9 +76,9 @@
       <input type="password" name="passwords[new]" id="newPasswordField" placeholder="new Password">
     </fieldset>
   </form>
-<!-- END OF CHANGE PASSWORD FORM-->
+  <!-- END OF CHANGE PASSWORD FORM-->
 
-<!-- CREATE SURVEY FORM -->
+  <!-- CREATE SURVEY FORM -->
   <form id="create" class="border new-item">
     <fieldset>
       <legend class="creation">Survey Title</legend>
@@ -90,16 +90,16 @@
   </form>
   <!-- END OF CREATE SURVEY FORM -->
 
-<!-- SHOW ALL FORM -->
+  <!-- SHOW ALL FORM -->
   <form id="showAll" class="border all-surveys">
     <fieldset>
       <legend>My Survey</legend>
       <input type="submit" value="Show My Surveys">
     </fieldset>
   </form>
-<!-- END OF SHOW ALL FORM -->
+  <!-- END OF SHOW ALL FORM -->
 
-<!-- UPDATE FORM -->
+  <!-- UPDATE FORM -->
   <form id="update" class="border update-surveys">
     <fieldset>
       <legend class="update">Update an Existing Survey</legend>
@@ -108,9 +108,9 @@
       <input type="text" name="survey[title]" id="updateSurvey" placeholder="Survey Title"><br>
     </fieldset>
   </form>
-<!-- END OF UPDATE FORM -->
+  <!-- END OF UPDATE FORM -->
 
-<!-- DELETE SURVEY FORM -->
+  <!-- DELETE SURVEY FORM -->
   <form id="delete" class="border delete-surveys">
     <fieldset>
       <legend class="update">Delete an Existing Survey</legend>
@@ -118,7 +118,7 @@
       <input type="text" name="survey[id]" id="deleteSurvey" placeholder="Survey ID Here"><br>
     </fieldset>
   </form>
-<!-- END OF DELETE SURVEY FORM -->
+  <!-- END OF DELETE SURVEY FORM -->
 </body>
 
 </html>
