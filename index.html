@@ -59,31 +59,31 @@
       <legend class="creation">Survey Title</legend>
       <p id="addSomething"></p>
       <input id="createField" type="submit" value="Add Survey">
-      <input type="text" name="survey[title]" placeholder="Survey Title">
+      <input type="text" name="survey[title]" id="createSurvey" placeholder="Survey Title">
     </fieldset>
   </form>
 
-  <form id="showAll" class="border all-movies">
+  <form id="showAll" class="border all-surveys">
     <fieldset>
       <legend>My Survey</legend>
-      <input type="submit" value="Show My Movies">
+      <input type="submit" value="Show My Surveys">
     </fieldset>
   </form>
 
-  <form id="update" class="border update-movies">
+  <form id="update" class="border update-surveys">
     <fieldset>
       <legend class="update">Update an Existing Survey</legend>
       <input id="updateField" type="submit" value="Update Survey"><br>
-      <input type="text" name="survey[id]" placeholder="Survey ID Here"><br>
-      <input type="text" name="survey[title]" placeholder="Survey Title"><br>
+      <input type="text" name="survey[id]" id="updateId" placeholder="Survey ID Here"><br>
+      <input type="text" name="survey[title]" id="updateSurvey" placeholder="Survey Title"><br>
     </fieldset>
   </form>
 
-  <form id="delete" class="border update-movies">
+  <form id="delete" class="border delete-surveys">
     <fieldset>
       <legend class="update">Delete an Existing Survey</legend>
       <input id="deleteField" type="submit" value="Delete Survey"><br>
-      <input type="text" name="survey[id]" placeholder="Survey ID Here"><br>
+      <input type="text" name="survey[id]" id="deleteSurvey" placeholder="Survey ID Here"><br>
     </fieldset>
   </form>
 

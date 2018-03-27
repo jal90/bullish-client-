@@ -1,2 +1,27 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
+
+
+.sign-out {
+  display: none;
+}
+
+.change-pw {
+  display: none;
+}
+
+.new-item {
+  display: none;
+}
+
+.all-surveys {
+  display: none;
+}
+
+.update-surveys {
+  display: none;
+}
+
+.delete-surveys {
+  display: none;
+}
