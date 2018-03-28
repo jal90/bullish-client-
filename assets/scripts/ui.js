@@ -1,4 +1,5 @@
 const store = require('./store')
+const showSurveysTemplate = require('./templates/survey-list.handlebars')
 
 const signUpSuccess = function (data) {
   console.log(data)
@@ -28,14 +29,14 @@ const signInSuccess = function (data) {
   $('#signInEmail').val('')
   $('#signInPassword').val('')
   $('.container').show()
-  // $('#sign-in').hide()
-  // $('#change-password').show()
-  // $('#sign-out').show()
-  // $('#create').show()
-  // $('#showAll').show()
-  // $('#update').show()
-  // $('#delete').show()
-  // $('#all-users').show()
+  $('#sign-in').hide()
+  $('#change-password').show()
+  $('#sign-out').show()
+  $('#create').show()
+  $('#showAll').show()
+  $('#update').show()
+  $('#delete').show()
+  $('#all-users').show()
   store.user = data.user
 }
 
@@ -85,7 +86,9 @@ const signOutFailure = function (error) {
 }
 
 const showAllSuccess = function (data) {
-  $('body').append(JSON.stringify(data))
+  console.log('data is ', data)
+  const showSurveysHTML = showSurveysTemplate({ surveys: data.surveys })
+  $('body').append(showSurveysHTML)
 }
 
 const createSuccessful = function (data) {
