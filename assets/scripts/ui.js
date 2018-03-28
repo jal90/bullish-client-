@@ -12,7 +12,7 @@ const signUpSuccess = function (data) {
 
 const signUpFailure = function (error) {
   console.log(error)
-  $('#message').text('"Houston, We Have a Problem"-Sign up Error')
+  $('#message').text('Houston, We Have a Problem"-Sign up Error')
   $('#message').css('background-color', 'red')
   $('#email-field').val('')
   $('#password-field').val('')
@@ -22,7 +22,9 @@ const signUpFailure = function (error) {
 const signInSuccess = function (data) {
   console.log(data)
   $('#message').text('"Welcome to THUNDERDOME!!!!!"-Sign In Success')
+  $('#message').css('color', 'white')
   $('#message').css('background-color', 'green')
+  $('#message').hide(9000)
   $('#signInEmail').val('')
   $('#signInPassword').val('')
   $('#change-password').show()
@@ -32,8 +34,6 @@ const signInSuccess = function (data) {
   $('#update').show()
   $('#delete').show()
   $('#all-users').show()
-  $('#sign-up').hide()
-  $('#sign-in').hide()
   store.user = data.user
 }
 
@@ -41,6 +41,8 @@ const signInFailure = function (error) {
   console.log(error)
   $('#message').text('"DANGER Will Robinson DANGER"-Signed in Error')
   $('#message').css('background-color', 'yellow')
+  $('#message').css('color', 'black')
+  $('#message').hide(9000)
   $('#signInEmail').val('')
   $('#signInPassword').val('')
 }
@@ -141,5 +143,5 @@ module.exports = {
   updateSuccess,
   updateFailed,
   deleteSuccess,
-  deleteFailed
+  deleteFailed,
 }
