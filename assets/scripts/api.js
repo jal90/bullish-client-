@@ -69,6 +69,17 @@ const showAllSurveys = function () {
   })
 }
 
+const showOneSurvey = function (id) {
+  return $.ajax({
+    url: config.apiOrigin + '/surveys/' + id,
+    method: 'GET',
+    headers: {
+      // contentType: 'application/json',
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
 const updateSurvey = function (data) {
   console.log(data)
   return $.ajax({
@@ -102,5 +113,6 @@ module.exports = {
   createSurvey,
   showAllSurveys,
   updateSurvey,
-  deleteSurvey
+  deleteSurvey,
+  showOneSurvey
 }

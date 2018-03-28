@@ -91,6 +91,14 @@ const showAllSuccess = function (data) {
   $('body').append(showSurveysHTML)
 }
 
+const showOneSuccess = function (data) {
+  console.log('data is ', data)
+  store.survey = data.survey
+  console.log('store.survey is ', store.survey)
+  $('#showOptionOne').html(store.survey.optionOne)
+  $('#showOptionTwo').html(store.survey.optionTwo)
+}
+
 const createSuccessful = function (data) {
   console.log(data)
   $('#message').text('Survey Created')
@@ -148,6 +156,7 @@ module.exports = {
   createSuccessful,
   createFailed,
   showAllSuccess,
+  showOneSuccess,
   updateSuccess,
   updateFailed,
   deleteSuccess,
