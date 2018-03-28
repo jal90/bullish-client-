@@ -145,7 +145,7 @@ const deleteFailed = function () {
 }
 
 const createResponseSuccessful = function () {
-
+  $('#vote').modal('hide')
 }
 
 module.exports = {

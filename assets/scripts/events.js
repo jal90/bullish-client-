@@ -109,12 +109,16 @@ const addHandlers = () => {
     $('#sign-in').toggle()
   })
   $('body').on('click', '#voteNowButton', onShowOneSurvey)
-  $('#create-response-button').on('click', onCreateResponse)
   // $('a.show-in').on('click', function () {
   //   $('#vote').toggle()
   // })
-  $('#showOptionOne').on('click', () => { selection = 0 })
-  $('#showOptionTwo').on('click', () => { selection = 1 })
+  $('#showOptionOne').on('click', () => {
+    selection = 0
+  })
+  $('#showOptionTwo').on('click', () => {
+    selection = 1
+  })
+  $('.create-response-button').on('click', onCreateResponse)
 }
 
 module.exports = {
