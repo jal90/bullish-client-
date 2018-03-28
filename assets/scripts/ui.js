@@ -3,6 +3,9 @@ const showSurveysTemplate = require('./templates/survey-list.handlebars')
 require('../../node_modules/jquery-toast-plugin/src/jquery.toast.js')
 require('../../node_modules/jquery-toast-plugin/src/jquery.toast.css')
 
+let zeros
+let ones
+
 const signUpSuccess = function (data) {
   console.log(data)
   $('#message').text('Sign up Success! Please sign in to enter survey wonderland')
@@ -163,6 +166,17 @@ const showOneSuccess = function (data) {
   console.log('store.survey is ', store.survey)
   $('#showOptionOne').html(store.survey.optionOne)
   $('#showOptionTwo').html(store.survey.optionTwo)
+
+  console.log('store.survey.responses is ', store.survey.responses)
+
+  zeros = store.survey.responses.filter(x => x === 0)
+  console.log('zeros is ', zeros)
+
+  ones = store.survey.responses.filter(x => x === 1)
+  console.log('ones is ', ones)
+
+  $('#zeros').html('Votes for ' + store.survey.optionOne + ': ' + zeros.length)
+  $('#ones').html('Votes for ' + store.survey.optionTwo + ': ' + ones.length)
 }
 
 const createSuccessful = function (data) {
