@@ -1,2 +1,136 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
+
+body {
+  // background-image: url('../../public/fun_background.jpg');
+  // // background-repeat: no-repeat;
+  // background-size: cover;
+}
+
+.sign-out {
+  display: none;
+}
+
+.change-pw {
+  display: none;
+}
+
+.new-item {
+  display: none;
+}
+
+.all-surveys {
+  display: none;
+}
+
+.update-surveys {
+  display: none;
+}
+
+.delete-surveys {
+  display: none;
+}
+
+#sign-up {
+  display: none;
+}
+
+#sign-in {
+  display: none;
+}
+
+.title {
+  text-align: center;
+  margin-top: 15%;
+}
+
+.subtitle {
+  text-align: center;
+}
+// .underline {
+//   color: white;
+//   border-bottom: 5px solid black;
+// }
+
+.this {
+  color: white;
+  font-size: 75px;
+  font-weight: bold;
+}
+
+.that {
+  color: black;
+  font-size: 40px;
+  font-style: italic;
+}
+
+h3 {
+  color: black;
+}
+
+.voteNow {
+  display: none;
+}
+
+body {
+  margin-top: 20px;
+}
+
+.modal-body:not(.two-col) {
+  padding: 0;
+}
+
+.glyphicon {
+  margin-right: 5px;
+}
+
+.glyphicon-new-window {
+  margin-left: 5px;
+}
+
+.modal-body .checkbox,
+.modal-body .radio {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.modal-body .list-group {
+  margin-bottom: 0;
+}
+
+.margin-bottom-none {
+  margin-bottom: 0;
+}
+
+.modal-body .checkbox label,
+.modal-body .radio label {
+  display: block;
+}
+
+.modal-footer {
+  margin-top: 0;
+}
+@media screen and (max-width: 325px) {
+  .btn-close {
+    margin-top: 5px;
+    width: 100%;
+  }
+
+  .btn-results {
+    margin-top: 5px;
+    width: 100%;
+  }
+
+  .btn-vote {
+    margin-top: 5px;
+    width: 100%;
+  }
+}
+
+.modal-footer .btn+.btn {
+  margin-left: 0;
+}
+
+.progress {
+  margin-right: 10px;
+}
