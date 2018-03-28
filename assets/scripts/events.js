@@ -55,6 +55,14 @@ const onShowAllSurveys = function (event) {
     .catch(ui.showAllFailure)
 }
 
+const onShowOneSurvey = function (event) {
+  event.preventDefault()
+  const dataId = $(event.target).attr('data-id')
+  api.showOneSurvey(dataId)
+    .then(ui.showOneSuccess)
+    .catch(ui.showOneFailure)
+}
+
 const onUpdateSurvey = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
@@ -87,6 +95,7 @@ const addHandlers = () => {
   $('a.show-in').on('click', function () {
     $('#sign-in').toggle()
   })
+  $('body').on('click', '#voteNowButton', onShowOneSurvey)
   // $('a.show-in').on('click', function () {
   //   $('#vote').toggle()
   // })
