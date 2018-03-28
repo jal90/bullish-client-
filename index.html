@@ -29,6 +29,8 @@
         <ul class="nav navbar-nav navbar-right">
           <li><a class="show-form" href="#sign-up"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
           <li><a class="show-in" href="#sign-in"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+          <li><a  id="sign-out" href="#sign-out"><span class="glyphicon glyphicon-log-out"></span> Sign Out</a></li>
+          <li><a id="showPass" class="show-pass" href="#change-password"><span class="glyphicon glyphicon-envelope"></span> Change Password</a></li>
         </ul>
       </div>
     </div>
@@ -61,15 +63,6 @@
     </fieldset>
   </form>
   <!-- END OF SIGN IN FORM -->
-
-  <!-- SIGN OUT FORM -->
-  <form id="sign-out" class="border sign-out">
-    <fieldset>
-      <legend class="leaving">Sign Out</legend>
-      <input type="submit" value="Sign Out">
-    </fieldset>
-  </form>
-  <!-- END OF SIGN OUT FORM -->
 
   <!-- CHANGE PASSWORD FORM -->
   <form id="change-password" class="border change-pw">
@@ -202,7 +195,55 @@ Overall
   </div>
 <!-- END OF VOTE MODAL -->
 
+<!-- CREATE SURVEY MODAL FORM -->
 
+<button type="button" class="btn btn-primary btn-lmd" data-toggle="modal" data-target="#createModal">
+  CREATE A SURVEY
+</button>
+
+<div class="modal fade" id="createModal" tabindex="-1" role="dialog" aria-labelledby="createModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <!-- <h4 class="modal-title" id="createModalLabel">Modal title</h4> -->
+      </div>
+      <div class="modal-body">
+<form id="createSurvey" class="form-horizontal">
+<fieldset>
+<legend>WELCOME TO TB SURVEY</legend>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="option_1">OPTION 1</label>
+  <div class="col-md-4">
+  <input id="option_1" name="option_1" type="text" placeholder="OPTION 1" class="form-control input-md" required="">
+
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="option_2">OPTION 2</label>
+  <div class="col-md-4">
+  <input id="option_2" name="option" type="text" placeholder="OPTION 2" class="form-control input-md" required="">
+  </div>
+</div>
+
+<!-- Button (Double) -->
+<div class="form-group">
+ <label class="col-md-4 control-label" for="button_1"></label>
+  <div class="col-md-8">
+    <button id="button_1" name="button_1" class="btn btn-success">CREATE</button>
+    <!-- <button id="button_2" name="button_2" class="btn btn-cancel">CANCEL</button> -->
+  </div>
+  </div>
+  </fieldset>
+  </form>
+        </div>
+  </div>
+     </div>
+   </div>
+<!-- END OF CREATE SURVEY MODAL FORM -->
 
   <!-- FOOTER -->
   <div class="navbar  navbar-inverse navbar-fixed-bottom">

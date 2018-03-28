@@ -43,6 +43,15 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
   margin-top: 15%;
 }
 
+#sign-out {
+  display: none;
+}
+
+#showPass {
+  display: none
+}
+
+
 .subtitle {
   text-align: center;
 }

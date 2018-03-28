@@ -32,11 +32,10 @@ const onChangePassword = function (event) {
 
 const onSignOut = function () {
   event.preventDefault()
-  const data = getFormFields(this)
-  api.signOut(data)
+  console.log('anything')
+  api.signOut()
     .then(ui.signOutSuccess)
     .catch(ui.signOutFailure)
-  console.log(data)
 }
 
 const onCreateSurvey = function (event) {
@@ -76,7 +75,7 @@ const addHandlers = () => {
   $('#sign-up').on('submit', onSignUp)
   $('#sign-in').on('submit', onSignIn)
   $('#change-password').on('submit', onChangePassword)
-  $('#sign-out').on('submit', onSignOut)
+  $('#sign-out').on('click', onSignOut)
   $('#create').on('submit', onCreateSurvey)
   $('#showAll').on('submit', onShowAllSurveys)
   $('#update').on('submit', onUpdateSurvey)
@@ -87,9 +86,9 @@ const addHandlers = () => {
   $('a.show-in').on('click', function () {
     $('#sign-in').toggle()
   })
-  // $('a.show-in').on('click', function () {
-  //   $('#vote').toggle()
-  // })
+  $('a.show-pass').on('click', function () {
+    $('#change-password').toggle()
+  })
 }
 
 module.exports = {
