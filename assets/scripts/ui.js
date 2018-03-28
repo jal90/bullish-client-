@@ -158,6 +158,10 @@ const showAllSuccess = function (data) {
   console.log('data is ', data)
   const showSurveysHTML = showSurveysTemplate({ surveys: data.surveys })
   $('#handlebars-here').html(showSurveysHTML)
+
+  if (data.surveys.length === 0) {
+    $('#handlebars-here').html('Someone needs to create a survey first!')
+  }
 }
 
 const showOneSuccess = function (data) {
