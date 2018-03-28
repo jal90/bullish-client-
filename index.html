@@ -87,9 +87,9 @@
     <fieldset>
       <legend class="creation">Survey Title</legend>
       <input id="createField" type="submit" value="Add Survey"><br>
-      <input type="text" name="survey[optionOne]" id="createOptionOne" placeholder="Choice One"><br>
-      <h3 id="addSomething">Or</h3>
-      <input type="text" name="survey[optionTwo]" id="createOptionTwo" placeholder="Choice Two">
+      <input type="text" name="survey[optionOne]" id="createOptionOne" placeholder="Choice One" required>
+      <p id="addSomething">Or</p>
+      <input type="text" name="survey[optionTwo]" id="createOptionTwo" placeholder="Choice Two" required>
     </fieldset>
   </form>
   <!-- END OF CREATE SURVEY FORM -->
@@ -108,9 +108,9 @@
     <fieldset>
       <legend class="update">Update an Existing Survey</legend>
       <input id="updateField" type="submit" value="Update Survey"><br>
-      <input type="text" name="survey[id]" id="updateId" placeholder="Survey ID Here"><br>
-      <input type="text" name="survey[optionOne]" id="updateOptionOne" placeholder="Update Choice One"><br>
-      <input type="text" name="survey[optionTwo]" id="updateOptionTwo" placeholder="Update Choice Two"><br>
+      <input type="text" name="survey[id]" id="updateId" placeholder="Survey ID Here" required><br>
+      <input type="text" name="survey[optionOne]" id="updateOptionOne" placeholder="Update Choice One" required><br>
+      <input type="text" name="survey[optionTwo]" id="updateOptionTwo" placeholder="Update Choice Two" required><br>
     </fieldset>
   </form>
   <!-- END OF UPDATE FORM -->
@@ -171,7 +171,7 @@
   </div>
   <!-- END OF VOTE MODAL -->
 
-
+<div id="handlebars-here"></div>
 
   <!-- FOOTER -->
   <!-- <div class="navbar  navbar-inverse navbar-fixed-bottom">
