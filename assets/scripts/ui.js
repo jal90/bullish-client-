@@ -27,13 +27,15 @@ const signInSuccess = function (data) {
   $('#message').hide(9000)
   $('#signInEmail').val('')
   $('#signInPassword').val('')
-  $('#change-password').show()
-  $('#sign-out').show()
-  $('#create').show()
-  $('#showAll').show()
-  $('#update').show()
-  $('#delete').show()
-  $('#all-users').show()
+  $('.container').show()
+  // $('#sign-in').hide()
+  // $('#change-password').show()
+  // $('#sign-out').show()
+  // $('#create').show()
+  // $('#showAll').show()
+  // $('#update').show()
+  // $('#delete').show()
+  // $('#all-users').show()
   store.user = data.user
 }
 
