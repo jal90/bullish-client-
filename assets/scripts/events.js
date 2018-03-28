@@ -77,6 +77,7 @@ const onUpdateSurvey = function (event) {
 
 const onDeleteSurvey = function (event) {
   event.preventDefault()
+
   const data = getFormFields(event.target)
   api.deleteSurvey(data)
     .then(ui.deleteSuccess)
