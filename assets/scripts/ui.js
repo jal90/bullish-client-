@@ -28,7 +28,7 @@ const signInSuccess = function (data) {
   $('#signInEmail').val('')
   $('#signInPassword').val('')
   $('.container').show()
-  // $('#sign-in').hide()
+  $('#sign-in').hide()
   // $('#change-password').show()
   // $('#sign-out').show()
   // $('#create').show()
