@@ -1,4 +1,3 @@
-
 #!/bin/sh
 
 API="http://localhost:4741"

@@ -61,6 +61,7 @@ const onUpdateSurvey = function (event) {
   api.updateSurvey(data)
     .then(ui.updateSuccess)
     .catch(ui.updateFailed)
+  console.log(data)
 }
 
 const onDeleteSurvey = function (event) {

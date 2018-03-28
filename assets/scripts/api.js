@@ -70,6 +70,7 @@ const showAllSurveys = function () {
 }
 
 const updateSurvey = function (data) {
+  console.log(data)
   return $.ajax({
     url: config.apiOrigin + '/surveys/' + data.survey.id,
     method: 'PATCH',

@@ -88,8 +88,8 @@ const createSuccessful = function (data) {
   console.log(data)
   $('#message').text('"It\'s Alive, It\'s Alive!!!"-New Movie Added')
   $('#message').css('background-color', 'green')
-  $('#createSurvey').val('')
-  $('#createOtherSurvey').val('')
+  $('#createOptionOne').val('')
+  $('#createOptionTwo').val('')
   store.movie = data.movie
 }
 
@@ -103,14 +103,17 @@ const updateSuccess = function (data) {
   $('#message').text('"I wish I knew how to quit you"-Successfully Update')
   $('#message').css('background-color', 'green')
   $('#updateId').val('')
-  $('#updateSurvey').val('')
+  $('#updateOptionOne').val('')
+  $('#updateOptionTwo').val('')
+  console.log('update was success ', data)
 }
 
 const updateFailed = function (data) {
   $('#message').text('Hold up one sec, Update Failure')
   $('#message').css('background-color', 'red')
   $('#updateId').val('')
-  $('#updateSurvey').val('')
+  $('#updateOptionOne').val('')
+  $('#updateOptionTwo').val('')
 }
 
 const deleteSuccess = function () {
