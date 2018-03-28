@@ -1,4 +1,3 @@
-
 #!/bin/bash
 
 API="http://localhost:4741"
@@ -11,8 +10,8 @@ curl "${API}${URL_PATH}" \
   --header "Authorization: Token token=${TOKEN}" \
   --data '{
     "survey": {
-      "title": "'"${TITLE}"'"
+      "optionOne": "'"${OPTION1}"'",
+      "optionTwo": "'"${OPTION2}"'"
     }
   }'
-
 echo

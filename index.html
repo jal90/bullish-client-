@@ -14,7 +14,8 @@
 </head>
 
 <body class="container-fluid">
-  <nav class="navbar navbar-inverse">
+
+  <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -22,7 +23,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-        <a class="navbar-brand" href="#">TB SURVEY</a>
+        <a class="navbar-brand" href="#">THIS OR THAT</a>
       </div>
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav navbar-right">
@@ -32,6 +33,9 @@
       </div>
     </div>
   </nav>
+
+  <h1 class="title"><span class="underline this">This</span> or <span class="underline that">That</span></h1>
+  <h3 class="subtitle">Creating a Winning Culture</h3>
 
   <!-- SIGN UP FORM -->
   <p id="message" class="message"></p>
@@ -83,9 +87,9 @@
     <fieldset>
       <legend class="creation">Survey Title</legend>
       <input id="createField" type="submit" value="Add Survey"><br>
-      <input type="text" name="survey[title]" id="createSurvey" placeholder="Choice One"><br>
+      <input type="text" name="survey[optionOne]" id="createOptionOne" placeholder="Choice One"><br>
       <h3 id="addSomething">Or</h3>
-      <input type="text" name="survey[title]" id="createOtherSurvey" placeholder="Choice Two">
+      <input type="text" name="survey[optionTwo]" id="createOptionTwo" placeholder="Choice Two">
     </fieldset>
   </form>
   <!-- END OF CREATE SURVEY FORM -->
@@ -105,7 +109,8 @@
       <legend class="update">Update an Existing Survey</legend>
       <input id="updateField" type="submit" value="Update Survey"><br>
       <input type="text" name="survey[id]" id="updateId" placeholder="Survey ID Here"><br>
-      <input type="text" name="survey[title]" id="updateSurvey" placeholder="Survey Title"><br>
+      <input type="text" name="survey[optionOne]" id="updateOptionOne" placeholder="Update Choice One"><br>
+      <input type="text" name="survey[optionTwo]" id="updateOptionTwo" placeholder="Update Choice Two"><br>
     </fieldset>
   </form>
   <!-- END OF UPDATE FORM -->
@@ -119,6 +124,7 @@
     </fieldset>
   </form>
   <!-- END OF DELETE SURVEY FORM -->
+
 
 <div class="container">
 <div class="row">
@@ -243,6 +249,15 @@ Overall
     </div>
   </div>
   <!-- END OF FOOTER -->
+
+  <div class="navbar  navbar-default navbar-fixed-bottom">
+     <div class="container">
+       <div class="navbar-text pull=left">
+	    <p> © 2018 TB SURVEY. All Rights Reserved</p>
+	   </div>
+   </div>
+ </div>
+
 </body>
 
 </html>
