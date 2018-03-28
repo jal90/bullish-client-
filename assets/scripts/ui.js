@@ -144,6 +144,10 @@ const deleteFailed = function () {
   $('#deleteSurvey').val('')
 }
 
+const createResponseSuccessful = function () {
+
+}
+
 module.exports = {
   signUpSuccess,
   signUpFailure,
@@ -160,5 +164,6 @@ module.exports = {
   updateSuccess,
   updateFailed,
   deleteSuccess,
-  deleteFailed
+  deleteFailed,
+  createResponseSuccessful
 }
