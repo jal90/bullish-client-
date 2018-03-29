@@ -18,7 +18,7 @@ Team Bullish
 <li>Design and implement client side</li>
 <li>Deploy Apps</li>
 <li>API:</li>
-<li>API Repo:</li>
+<li>API Repo:https://github.com/Team-Bullish/bullish-api </li>
 </ol>
 
 <h2>Technologies Used</h2>
@@ -33,8 +33,13 @@ Team Bullish
 <li>JSON</li>
 </ol>
 
+<h2>Wireframe</h2>
+Wireframe:https://imgur.com/a/dzuLD
+
 <h2>Things to Add with More Time</h2>
-1. Real-Time Dashboard
-2. Survey results
-3. Breadcrumbs
-4. Slack Intergration
+<ol>
+<li>Real-Time Dashboard</li>
+<li>Survey results</li>
+<li>Breadcrumbs</li>
+<li>Slack Intergration</li>
+</ol>
