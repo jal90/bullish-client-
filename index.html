@@ -29,6 +29,8 @@
         <ul class="nav navbar-nav navbar-right">
           <li><a class="show-form" href="#sign-up"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
           <li><a class="show-in" href="#sign-in"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+          <li><a  id="sign-out" href="#sign-out"><span class="glyphicon glyphicon-log-out"></span> Sign Out</a></li>
+          <li><a id="showPass" class="show-pass" href="#change-password"><span class="glyphicon glyphicon-envelope"></span> Change Password</a></li>
         </ul>
       </div>
     </div>
@@ -44,9 +46,9 @@
     <fieldset>
       <legend>Sign up!</legend>
       <input type="submit" value="Sign up!" id="signUpButton">
-      <input type="text" name="credentials[email]" required id="email-field" placeholder="Email">
+      <input type="email" name="credentials[email]" required id="email-field" placeholder="Email">
       <input type="password" name="credentials[password]" required id="password-field" placeholder="Password">
-      <input type="password" name="credentials[password_confirmation]" required placeholder="Confirm Password">
+      <input type="password" name="credentials[password_confirmation]" id="password-confirmation"required placeholder="Confirm Password">
     </fieldset>
   </form>
   <!-- END OF SIGN UP FORM -->
@@ -63,12 +65,12 @@
   <!-- END OF SIGN IN FORM -->
 
   <!-- SIGN OUT FORM -->
-  <form id="sign-out" class="border sign-out">
+  <!-- <form id="sign-out" class="border sign-out">
     <fieldset>
       <legend class="leaving">Sign Out</legend>
       <input type="submit" value="Sign Out">
     </fieldset>
-  </form>
+  </form> -->
   <!-- END OF SIGN OUT FORM -->
 
   <!-- CHANGE PASSWORD FORM -->

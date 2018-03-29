@@ -2,12 +2,37 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
 
 body {
-  // background-image: url('../../public/fun_background.jpg');
-  // // background-repeat: no-repeat;
-  // background-size: cover;
+  background-image: url("https://i.imgur.com/3xpZwYo.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-attachment: fixed;
+  background-color: gray;
 }
 
 .sign-out {
+  display: none;
+}
+
+#sign-up {
+  display: none;
+}
+
+#sign-in {
+  display: none;
+}
+
+.title {
+  text-align: center;
+  margin-top: 15%;
+}
+
+#sign-out {
+  display: none;
+}
+
+#showPass {
   display: none;
 }
 
@@ -46,6 +71,11 @@ body {
 
 .subtitle {
   text-align: center;
+  text-shadow:
+		-1px -1px 0 white,
+		1px -1px 0 white,
+		-1px 1px 0 white,
+		1px 1px 0 white;
 }
 // .underline {
 //   color: white;
