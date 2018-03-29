@@ -7,12 +7,9 @@ let zeros
 let ones
 
 const signUpSuccess = function (data) {
-  console.log(data)
-  $('#message').text('Sign up Success! Please sign in to enter survey wonderland')
-  $('#message').css('background-color', 'green')
   $('#email-field').val('')
   $('#password-field').val('')
-  $('#password-conformation-field').val('')
+  $('#password-confirmation').val('')
   $('#sign-up').hide()
 
   $.toast({
@@ -23,7 +20,7 @@ const signUpSuccess = function (data) {
     allowToastClose: true,
     hideAfter: 3000,
     stack: 5,
-    position: 'top-right',
+    position: 'top-left',
     textAlign: 'left',
     loader: true,
     loaderBg: '#fed',
@@ -32,10 +29,9 @@ const signUpSuccess = function (data) {
   })
 }
 
-const signUpFailure = function (error) {
-  console.log(error)
-  $('#message').text('Opps, Sign up Error. Please try again')
-  $('#message').css('background-color', 'red')
+const signUpFailure = function () {
+  // $('#message').text('Opps, Sign up Error. Please try again')
+  // $('#message').css('background-color', 'red')
   $('#email-field').val('')
   $('#password-field').val('')
   $('#password-conformation-field').val('')
@@ -48,7 +44,7 @@ const signUpFailure = function (error) {
     allowToastClose: true,
     hideAfter: 3000,
     stack: 5,
-    position: 'top-right',
+    position: 'top-left',
     textAlign: 'left',
     loader: true,
     loaderBg: 'red',
@@ -58,7 +54,6 @@ const signUpFailure = function (error) {
 }
 
 const signInSuccess = function (data) {
-  console.log(data)
   $('#message').text('Sign In Success!!! Let\'s create a survey')
   $('#message').css('color', 'white')
   $('#message').css('background-color', 'green')
@@ -67,21 +62,27 @@ const signInSuccess = function (data) {
   $('#signInPassword').val('')
   $('.container').show()
   $('#sign-in').hide()
-  $('#change-password').show()
+  // $('#change-password').show()
   $('#sign-out').show()
   $('#create').show()
   $('#showAll').show()
   $('#update').show()
   $('#delete').show()
   $('#all-users').show()
+  $('.show-form').hide()
+  $('.show-in').hide()
+  $('#sign-in').hide()
+  $('#sign-up').hide()
+  $('#showPass').show()
+  $('#sign-out').show()
+  $('body').css('background-image', 'none')
   store.user = data.user
 }
 
-const signInFailure = function (error) {
-  console.log(error)
+const signInFailure = function () {
   $('#message').text('Oops, Signed in Error. Please Try Again')
-  $('#message').css('background-color', 'yellow')
-  $('#message').css('color', 'black')
+  $('#message').css('background-color', 'red')
+  $('#message').css('color', 'white')
   $('#message').hide(9000)
   $('#signInEmail').val('')
   $('#signInPassword').val('')
@@ -101,7 +102,7 @@ const changeSuccess = function () {
     allowToastClose: true,
     hideAfter: 3000,
     stack: 5,
-    position: 'top-right',
+    position: 'top-left',
     textAlign: 'left',
     loader: true,
     loaderBg: '#fed',
@@ -110,8 +111,7 @@ const changeSuccess = function () {
   })
 }
 
-const changeFailure = function (error) {
-  console.log(error)
+const changeFailure = function () {
   $('#message').text('Oops, error changing password. Please try again.')
   $('#message').css('background-color', 'red')
   $('#oldPasswordField').val('')
@@ -125,7 +125,7 @@ const changeFailure = function (error) {
     allowToastClose: true,
     hideAfter: 3000,
     stack: 5,
-    position: 'top-right',
+    position: 'top-left',
     textAlign: 'left',
     loader: true,
     loaderBg: 'red',
@@ -144,18 +144,22 @@ const signOutSuccess = function () {
   $('#update').hide()
   $('#delete').hide()
   $('#content').hide()
-  $('#sign-up').show()
-  $('#sign-in').show()
+  $('#sign-up').hide()
+  $('#sign-in').hide()
+  $('.show-form').show()
+  $('.show-in').show()
+  $('#sign-out').hide()
+  $('#showPass').hide()
+  $('#handlebars-here').hide()
+  $('body').css('background-image', "url('https://i.imgur.com/3xpZwYo.jpg')")
 }
 
-const signOutFailure = function (error) {
-  console.log(error)
+const signOutFailure = function () {
   $('#message').text('Signout Error, I thought you were leaving')
   $('#message').css('background-color', 'red')
 }
 
 const showAllSuccess = function (data) {
-  console.log('data is ', data)
   const showSurveysHTML = showSurveysTemplate({ surveys: data.surveys })
   $('#handlebars-here').html(showSurveysHTML)
 
@@ -165,31 +169,40 @@ const showAllSuccess = function (data) {
 }
 
 const showOneSuccess = function (data) {
-  console.log('data is ', data)
   store.survey = data.survey
-  console.log('store.survey is ', store.survey)
   $('#showOptionOne').html(store.survey.optionOne)
   $('#showOptionTwo').html(store.survey.optionTwo)
 
-  console.log('store.survey.responses is ', store.survey.responses)
-
   zeros = store.survey.responses.filter(x => x === 0)
-  console.log('zeros is ', zeros)
 
   ones = store.survey.responses.filter(x => x === 1)
-  console.log('ones is ', ones)
 
   $('#zeros').html('Votes for ' + store.survey.optionOne + ': ' + zeros.length)
   $('#ones').html('Votes for ' + store.survey.optionTwo + ': ' + ones.length)
 }
 
 const createSuccessful = function (data) {
-  console.log(data)
   $('#message').text('Survey Created')
   $('#message').css('background-color', 'green')
   $('#createOptionOne').val('')
   $('#createOptionTwo').val('')
   $('#handlebars-here').html('Click show my surveys to see changes')
+
+  $.toast({
+    text: 'Thank you Mr. Crockett',
+    heading: 'Created a survey!',
+    icon: 'success',
+    showHideTransition: 'slide',
+    allowToastClose: true,
+    hideAfter: 3000,
+    stack: 5,
+    position: 'top-left',
+    textAlign: 'left',
+    loader: true,
+    loaderBg: 'white',
+    bgColor: 'white',
+    textColor: 'black'
+  })
 }
 
 const createFailed = function (data) {
@@ -214,7 +227,7 @@ const updateSuccess = function () {
     allowToastClose: true,
     hideAfter: 3000,
     stack: 5,
-    position: 'top-right',
+    position: 'top-left',
     textAlign: 'left',
     loader: true,
     loaderBg: '#fed',
@@ -238,7 +251,7 @@ const updateFailed = function (data) {
     allowToastClose: true,
     hideAfter: 6000,
     stack: 5,
-    position: 'top-right',
+    position: 'top-left',
     textAlign: 'left',
     loader: true,
     loaderBg: 'red',
@@ -251,7 +264,6 @@ const deleteSuccess = function () {
   $('#message').text('Delete Successfully')
   $('#message').css('background-color', 'green')
   $('#deleteSurvey').val('')
-  console.log('deleteSuccessful')
   $('#handlebars-here').html('Click show my surveys to see changes')
 
   $.toast({
@@ -262,7 +274,7 @@ const deleteSuccess = function () {
     allowToastClose: true,
     hideAfter: 6000,
     stack: 5,
-    position: 'top-right',
+    position: 'top-left',
     textAlign: 'left',
     loader: true,
     loaderBg: 'green',
@@ -284,7 +296,7 @@ const deleteFailed = function () {
     allowToastClose: true,
     hideAfter: 6000,
     stack: 5,
-    position: 'top-right',
+    position: 'top-left',
     textAlign: 'left',
     loader: true,
     loaderBg: 'red',
@@ -304,7 +316,7 @@ const createResponseSuccessful = function () {
     allowToastClose: true,
     hideAfter: 3000,
     stack: 5,
-    position: 'top-right',
+    position: 'top-left',
     textAlign: 'left',
     loader: true,
     loaderBg: '#fed',

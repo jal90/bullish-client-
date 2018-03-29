@@ -24,7 +24,7 @@ const signIn = function (data) {
 }
 
 const changePassword = function (data) {
-  console.log(data)
+  // console.log(data)
   return $.ajax({
     url: config.apiOrigin + '/change-password/' + store.user.id,
     method: 'PATCH',
@@ -36,8 +36,7 @@ const changePassword = function (data) {
   })
 }
 
-const signOut = function (id) {
-  console.log(id)
+const signOut = function () {
   return $.ajax({
     url: config.apiOrigin + '/sign-out/' + store.user.id,
     method: 'DELETE',
@@ -81,7 +80,6 @@ const showOneSurvey = function (id) {
 }
 
 const updateSurvey = function (data) {
-  console.log(data)
   return $.ajax({
     url: config.apiOrigin + '/surveys/' + data.survey.id,
     method: 'PATCH',
