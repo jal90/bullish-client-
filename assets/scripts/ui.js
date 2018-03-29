@@ -76,6 +76,7 @@ const signInSuccess = function (data) {
   $('#showPass').show()
   $('#sign-out').show()
   $('body').css('background-image', 'none')
+  $('#handlebars-here').show()
   store.user = data.user
 }
 
