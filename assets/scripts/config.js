@@ -2,7 +2,7 @@
 
 const config = {
   apiOrigins: {
-    production: 'https://powerful-earth-74392.herokuapp.com'
+    production: 'https://protected-ridge-59730.herokuapp.com'
   }
 }
 
